@@ -1,0 +1,226 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            /* Fuente base un poco más grande */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        /* --- HEADER --- */
+        header {
+            height: 18vh;
+            /* Más alto para acomodar textos grandes */
+            background-color: #1e1e1e;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 10;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            /* Para que el VS gigante no se salga */
+        }
+
+        /* Contenedor central */
+        .header-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            /* Más espacio entre elementos */
+            flex: 1;
+            position: relative;
+            /* Para posicionar el VS detrás */
+        }
+
+        /* Título Principal (BOTONES) */
+        .main-title {
+            font-size: 3.5rem;
+            /* MUCHO más grande */
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 0;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+            /* Por encima del VS */
+        }
+
+        /* La marca de agua VS decorativa */
+        .vs-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            /* Gigante */
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.07);
+            /* Casi transparente */
+            user-select: none;
+            z-index: 1;
+            /* Detrás del título */
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        /* Estilos de los textos laterales (Bootstrap / Tailwind) */
+        .side-title {
+            margin: 0;
+            font-size: 2.2rem;
+            /* Más grandes */
+            font-weight: bold;
+            white-space: nowrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .bs {
+            color: #9d70ff;
+            /* Un lila más brillante */
+        }
+
+        .tw {
+            color: #38bdf8;
+            /* Un azul más brillante */
+        }
+
+        /* Botones de navegación */
+        .nav-btn {
+            background-color: #333;
+            border: none;
+            padding: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Botones más grandes */
+            width: 60px;
+            height: 60px;
+            z-index: 10;
+        }
+
+        .nav-btn:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        .nav-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* --- RESPONSIVE HEADER --- */
+        @media (max-width: 900px) {
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .side-title {
+                font-size: 1.2rem;
+            }
+
+            .vs-watermark {
+                font-size: 6rem;
+            }
+
+            .header-center {
+                gap: 15px;
+            }
+
+            .nav-btn {
+                width: 45px;
+                height: 45px;
+            }
+
+            header {
+                height: 14vh;
+            }
+        }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        .main-content {
+            flex: 1;
+            display: flex;
+        }
+
+        .split-section {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            position: relative;
+            background: white;
+        }
+
+        .split-section:first-child {
+            border-right: 2px solid #ddd;
+        }
+
+        .component-stage {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            /* Escalamos un poco lo que se renderice aquí */
+            transform: scale(1.2);
+        }
+
+        /* Texto explicativo grande */
+        .explanation {
+            margin-top: 20px;
+            font-size: 1.6rem;
+            /* AUMENTADO considerablemente */
+            line-height: 1.4;
+            color: #333;
+            text-align: center;
+            font-weight: 500;
+            max-width: 80%;
+        }
+
+        /* --- FOOTER (CODE EDITOR) --- */
+        footer {
+            height: 25vh;
+            background-color: #1e1e1e;
+            display: flex;
+            border-top: 4px solid #333;
+        }
+
+        .code-editor-pane {
+            width: 50%;
+            padding: 0;
+            color: #d4d4d4;
+            font-family: 'Consolas', 'Monaco', monospace;
+            /* Código más grande también */
+            font-size: 1.3rem;
+            overflow: auto;
+            scrollbar-width: none;
+        }
+
+        .code-editor-pane::-webkit-scrollbar {
+            display: none;
+        }
+
+        .editable-code {
+            padding: 20px;
+            outline: none;
+            white-space: pre-wrap;
+            min-height: 100%;
+        }
