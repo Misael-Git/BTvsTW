@@ -7,8 +7,6 @@
   <title>Bootstrap vs Tailwind - Grids</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-
   <script>
     tailwind.config = {
       corePlugins: { preflight: false },
@@ -16,7 +14,6 @@
     }
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -45,18 +42,43 @@
 
   <div class="main-content">
     <section class="split-section">
-      <div id="preview-bs" class="component-stage"></div>
+      <div id="preview-bs" class="component-stage">
+        <!-- Bootstrap Grid -->
+        <div class="container">
+          <div class="row g-3 text-center">
+            <!-- Columna 1 -->
+            <div class="col-12 col-md-4">
+              <div class="p-4 rounded bg-primary text-white fw-bold">Col 1</div>
+            </div>
+            <!-- Columna 2 -->
+            <div class="col-12 col-md-4">
+              <div class="p-4 rounded bg-success text-white fw-bold">Col 2</div>
+            </div>
+            <!-- Columna 3 -->
+            <div class="col-12 col-md-4">
+              <div class="p-4 rounded bg-dark text-white fw-bold">Col 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="split-section">
-      <div id="preview-tw" class="component-stage"></div>
+      <div id="preview-tw" class="component-stage">
+        <!-- Tailwind Grid -->
+        <div class="w-full max-w-xl grid grid-cols-1 md:grid-cols-3 gap-3 text-center">
+          <div class="p-4 rounded bg-sky-600 text-white font-bold">Col 1</div>
+          <div class="p-4 rounded bg-emerald-600 text-white font-bold">Col 2</div>
+          <div class="p-4 rounded bg-slate-900 text-white font-bold">Col 3</div>
+        </div>
+      </div>
     </section>
   </div>
 
   <footer>
     <div class="code-editor-pane">
       <div id="code-bs" class="editable-code" contenteditable="true" spellcheck="false">
-        &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;container w-75&quot;&gt;
         &lt;div class=&quot;row g-3 text-center&quot;&gt;
         &lt;div class=&quot;col-12 col-md-4&quot;&gt;
         &lt;div class=&quot;p-4 rounded bg-primary text-white fw-bold&quot;&gt;Col 1&lt;/div&gt;
