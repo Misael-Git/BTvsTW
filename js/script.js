@@ -9,3 +9,8 @@ updatePreview('code-tw', 'preview-tw');
 
 document.getElementById('code-bs').addEventListener('input', () => updatePreview('code-bs', 'preview-bs'));
 document.getElementById('code-tw').addEventListener('input', () => updatePreview('code-tw', 'preview-tw'));
+
+tailwind.config = {
+      corePlugins: { preflight: false },
+      important: '#preview-tw'
+    }
