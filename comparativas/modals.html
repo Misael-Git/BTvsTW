@@ -56,71 +56,52 @@
 
   <footer>
     <div class="code-editor-pane">
-      <div id="code-bs" class="editable-code" contenteditable="true" spellcheck="false">
-        &lt;!-- Bot&oacute;n que dispara el modal --&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;modal&quot;
-        data-bs-target=&quot;#demoModal&quot;&gt;
-        Abrir modal
-        &lt;/button&gt;
+      <div id="code-bs" class="editable-code" contenteditable="true" spellcheck="false">&lt;!-- Bot&oacute;n que dispara el modal --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;modal&quot;data-bs-target=&quot;#demoModal&quot;&gt;Abrir modal&lt;/button&gt;
 
-        &lt;!-- Modal Bootstrap --&gt;
-        &lt;div class=&quot;modal fade&quot; id=&quot;demoModal&quot; tabindex=&quot;-1&quot;
-        aria-labelledby=&quot;demoModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
-        &lt;div class=&quot;modal-dialog&quot;&gt;
-        &lt;div class=&quot;modal-content&quot;&gt;
-        &lt;div class=&quot;modal-header&quot;&gt;
-        &lt;h1 class=&quot;modal-title fs-5&quot; id=&quot;demoModalLabel&quot;&gt;Modal Bootstrap&lt;/h1&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot;
-        aria-label=&quot;Cerrar&quot;&gt;&lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;modal-body&quot;&gt;
-        Esto es un modal con &lt;code&gt;data-bs-toggle&lt;/code&gt; y JS de Bootstrap.
-        &lt;/div&gt;
-        &lt;div class=&quot;modal-footer&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;
-        data-bs-dismiss=&quot;modal&quot;&gt;Cerrar&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Guardar&lt;/button&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;</div>
+&lt;!-- Modal Bootstrap --&gt;
+ &lt;div class=&quot;modal fade&quot; id=&quot;demoModal&quot; tabindex=&quot;-1&quot;aria-labelledby=&quot;demoModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+   &lt;div class=&quot;modal-content&quot;&gt;
+    &lt;div class=&quot;modal-header&quot;&gt;
+     &lt;h1 class=&quot;modal-title fs-5&quot; id=&quot;demoModalLabel&quot;&gt;Modal Bootstrap&lt;/h1&gt;
+     &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot;aria-label=&quot;Cerrar&quot;&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-body&quot;&gt;
+     Esto es un modal con &lt;code&gt;data-bs-toggle&lt;/code&gt; y JS de Bootstrap.
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-footer&quot;&gt;
+     &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;
+     data-bs-dismiss=&quot;modal&quot;&gt;Cerrar&lt;/button&gt;
+     &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Guardar&lt;/button&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;</div>
     </div>
 
     <div class="code-editor-pane" style="border-left: 1px solid #444;">
-      <div id="code-tw" class="editable-code" contenteditable="true" spellcheck="false">
-        &lt;div class=&quot;flex flex-col items-center gap-3&quot;&gt;
-        &lt;button data-tw-open class=&quot;px-5 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700
-        transition&quot;&gt;
-        Abrir modal
-        &lt;/button&gt;
+      <div id="code-tw" class="editable-code" contenteditable="true" spellcheck="false">&lt;div class=&quot;flex flex-col items-center gap-3&quot;&gt;
+&lt;button data-tw-open class=&quot;px-5 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition&quot;&gt;Abrir modal&lt;/button&gt;
 
-        &lt;!-- Modal Tailwind (controlado por JS del slide) --&gt;
-        &lt;div data-tw-modal class=&quot;hidden fixed inset-0 z-50 items-center justify-center&quot;&gt;
-        &lt;div data-tw-backdrop class=&quot;absolute inset-0 bg-black/50&quot;&gt;&lt;/div&gt;
+&lt;!-- Modal Tailwind (controlado por JS del slide) --&gt;
+ &lt;div data-tw-modal class=&quot;hidden fixed inset-0 z-50 items-center justify-center&quot;&gt;
+  &lt;div data-tw-backdrop class=&quot;absolute inset-0 bg-black/50&quot;&gt;&lt;/div&gt;
 
-        &lt;div class=&quot;relative w-[22rem] rounded-xl bg-white p-6 shadow-xl&quot;&gt;
-        &lt;div class=&quot;flex items-start justify-between gap-3&quot;&gt;
-        &lt;h3 class=&quot;text-xl font-bold text-slate-800&quot;&gt;Modal Tailwind&lt;/h3&gt;
-        &lt;button data-tw-close class=&quot;p-2 rounded hover:bg-slate-100&quot; aria-label=&quot;Cerrar&quot;&gt;
-        ✕
-        &lt;/button&gt;
-        &lt;/div&gt;
+  &lt;div class=&quot;relative w-[22rem] rounded-xl bg-white p-6 shadow-xl&quot;&gt;
+   &lt;div class=&quot;flex items-start justify-between gap-3&quot;&gt;
+    &lt;h3 class=&quot;text-xl font-bold text-slate-800&quot;&gt;Modal Tailwind&lt;/h3&gt;
+    &lt;button data-tw-close class=&quot;p-2 rounded hover:bg-slate-100&quot; aria-label=&quot;Cerrar&quot;&gt; ✕ &lt;/button&gt;
+   &lt;/div&gt;
 
-        &lt;p class=&quot;mt-3 text-slate-600&quot;&gt;
-        Tailwind no trae JS: t&uacute; controlas la l&oacute;gica (mostrar/ocultar).
-        &lt;/p&gt;
+   &lt;p class=&quot;mt-3 text-slate-600&quot;&gt;Tailwind no trae JS: t&uacute; controlas la l&oacute;gica (mostrar/ocultar).&lt;/p&gt;
 
-        &lt;div class=&quot;mt-5 flex justify-end gap-2&quot;&gt;
-        &lt;button data-tw-close class=&quot;px-4 py-2 rounded border border-slate-300 hover:bg-slate-50&quot;&gt;
-        Cerrar
-        &lt;/button&gt;
-        &lt;button class=&quot;px-4 py-2 rounded bg-sky-600 text-white font-semibold hover:bg-sky-700&quot;&gt;
-        Guardar
-        &lt;/button&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;</div>
+   &lt;div class=&quot;mt-5 flex justify-end gap-2&quot;&gt;
+    &lt;button data-tw-close class=&quot;px-4 py-2 rounded border border-slate-300 hover:bg-slate-50&quot;&gt;Cerrar&lt;/button&gt;
+    &lt;button class=&quot;px-4 py-2 rounded bg-sky-600 text-white font-semibold hover:bg-sky-700&quot;&gt;Guardar&lt;/button&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</div>
     </div>
   </footer>
 
