@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Images - Bootstrap vs Tailwind</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>Images - Bootstrap vs Tailwind</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
 
-<header>
-  <h1>IMAGES</h1>
-  <p>Comparativa de imágenes en Bootstrap y Tailwind</p>
-</header>
+    <header>
+        <!--- CAMBIAR ENLACE (PREVIO) -->
+        <a href="footer.html" class="nav-btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </a>
 
-<main class="container">
+        <div class="header-center">
+            <div class="vs-watermark">VS</div>
 
-  <section class="preview">
-    <h2>Bootstrap</h2>
-    <img src="img/imagen1.jpg" class="img-fluid rounded" alt="Bootstrap image">
-  </section>
+            <span class="side-title bs">Bootstrap</span>
+            <!--- CAMBIAR TÍTULO -->
+            <h1 class="main-title">IMÁGENES</h1>
+            <span class="side-title tw">Tailwind</span>
+        </div>
 
-  <section class="code">
-<pre><code>&lt;img src="example.jpg" class="img-fluid rounded"&gt;</code></pre>
-  </section>
+        <!--- CAMBIAR ENLACE (SIGUIENTE) -->
+        <a href="icons.html" class="nav-btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </a>
+    </header>
+    <div class="main-content">
+        <section class="split-section">
+            <div id="preview-bs" class="component-stage"></div> <!--- Este DIV es el que muestra el código de abajo -->
+            <h4 class="explanation">
+                <!--- CAMBIAR EXPLICACIÓN -->
+            </h4>
+        </section>
 
-  <section class="preview">
-    <h2>Tailwind</h2>
-    <img src="img/imagen1.jpg" class="max-w-full rounded-lg shadow-md" alt="Tailwind image">
-  </section>
+        <section class="split-section">
+            <div id="preview-tw" class="component-stage"></div>
+            <h4 class="explanation">
+                <!--- CAMBIAR EXPLICACIÓN -->
+            </h4>
+        </section>
+    </div>
+       <footer>
+<!--- CAMBIAR CÓDIGO BT -->
+        <div class="code-editor-pane">
+            <div id="code-bs" class="editable-code" contenteditable="true" spellcheck="false">
+&lt;img src="img/imagen1.jpg" class="img-fluid rounded"&gt;</div>
+        </div>
 
-  <section class="code">
-<pre><code>&lt;img src="img/imagen1.jpg" class="max-w-full rounded-lg shadow-md"&gt;</code></pre>
-  </section>
-
-</main>
-
-<script src="js/script.js"></script>
+<!--- CAMBIAR CÓDIGO TW -->
+        <div class="code-editor-pane" style="border-left: 1px solid #444;">
+            <div id="code-tw" class="editable-code" contenteditable="true" spellcheck="false">
+&lt;img src="img/imagen1.jpg" class="max-w-full rounded-lg shadow-md"&gt;</div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

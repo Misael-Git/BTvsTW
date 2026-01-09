@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Footer - Bootstrap vs Tailwind</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>Footer - Bootstrap vs Tailwind</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
 
-<header>
-  <h1>FOOTER</h1>
-  <p>Comparativa de footers en Bootstrap y Tailwind</p>
-</header>
+    <header>
+        <!--- CAMBIAR ENLACE (PREVIO) -->
+        <a href="index.html" class="nav-btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+        </a>
 
-<main class="container">
+        <div class="header-center">
+            <div class="vs-watermark">VS</div>
 
-  <section class="preview">
-    <h2>Bootstrap</h2>
-    <footer class="bg-dark text-white text-center p-3">
-      <p>© 2026 Bootstrap Footer</p>
+            <span class="side-title bs">Bootstrap</span>
+            <!--- CAMBIAR TÍTULO -->
+            <h1 class="main-title">FOOTER</h1>
+            <span class="side-title tw">Tailwind</span>
+        </div>
+
+        <!--- CAMBIAR ENLACE (SIGUIENTE) -->
+        <a href="images.html" class="nav-btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+        </a>
+    </header>
+
+    <div class="main-content">
+        <section class="split-section">
+            <div id="preview-bs" class="component-stage"></div> <!--- Este DIV es el que muestra el código de abajo -->
+            <h4 class="explanation">
+                <!--- CAMBIAR EXPLICACIÓN -->
+                Footer básico con clases de utilidad para fondo, color de texto y padding.
+            </h4>
+        </section>
+
+        <section class="split-section">
+            <div id="preview-tw" class="component-stage"></div>
+            <h4 class="explanation">
+                <!--- CAMBIAR EXPLICACIÓN -->
+                Footer básico con clases de utilidad para fondo, color de texto y padding.
+            </h4>
+        </section>
+    </div>
+    <footer>
+        <!--- CAMBIAR CÓDIGO BT -->
+        <div class="code-editor-pane">
+            <div id="code-bs" class="editable-code" contenteditable="true" spellcheck="false">
+                &lt;footer class="bg-dark text-white text-center p-3"&gt;
+                &lt;p&gt;© 2026 Bootstrap Footer&lt;/p&gt;
+                &lt;/footer&gt;</div>
+        </div>
+
+        <!--- CAMBIAR CÓDIGO TW -->
+        <div class="code-editor-pane" style="border-left: 1px solid #444;">
+            <div id="code-tw" class="editable-code" contenteditable="true" spellcheck="false">
+                &lt;footer class="bg-gray-800 text-white text-center p-3"&gt;
+                &lt;p&gt;
+                © 2026 Tailwind Footer
+                &lt;/p&gt;
+                &lt;/footer&gt;</div>
+        </div>
     </footer>
-  </section>
 
-  <section class="code">
-<pre><code>&lt;footer class="bg-dark text-white text-center p-3"&gt;
-  &lt;p&gt;© 2026 Bootstrap Footer&lt;/p&gt;
-&lt;/footer&gt;</code></pre>
-  </section>
-
-  <section class="preview">
-    <h2>Tailwind</h2>
-    <footer class="bg-gray-800 text-white text-center p-4">
-      <p>© 2026 Tailwind Footer</p>
-    </footer>
-  </section>
-
-  <section class="code">
-<pre><code>&lt;footer class="bg-gray-800 text-white text-center p-4"&gt;
-  &lt;p&gt;© 2026 Tailwind Footer&lt;/p&gt;
-&lt;/footer&gt;</code></pre>
-  </section>
-
-</main>
-
-<script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
