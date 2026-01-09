@@ -23,7 +23,7 @@
 <body>
 
   <header>
-    <a href="forms.html" class="nav-btn" aria-label="Anterior">
+    <a href="cards.html" class="nav-btn" aria-label="Anterior">
       <svg viewBox="0 0 24 24">
         <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
       </svg>
@@ -36,7 +36,7 @@
       <span class="side-title tw">Tailwind</span>
     </div>
 
-    <a href="alerts.html" class="nav-btn" aria-label="Siguiente">
+    <a href="forms.html" class="nav-btn" aria-label="Siguiente">
       <svg viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
       </svg>
@@ -47,16 +47,10 @@
     <section class="split-section">
 
       <div id="preview-bs" class="component-stage" style="transform:none;"></div>
-      <h4 class="explanation">
-        Incluye JS y data-API:<br /> <code>data-bs-toggle</code> + <code>.modal</code>
-      </h4>
     </section>
 
     <section class="split-section">
       <div id="preview-tw" class="component-stage" style="transform:none;"></div>
-      <h4 class="explanation">
-        No trae JS por defecto:<br /> tú manejas mostrar/ocultar
-      </h4>
     </section>
   </div>
 
@@ -133,48 +127,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
-
-  <script>
-
-    window.__twModalEscBound = window.__twModalEscBound || false;
-
-    window.afterPreviewUpdate = function () {
-      const root = document.getElementById('preview-tw');
-      if (!root) return;
-
-      const openBtn = root.querySelector('[data-tw-open]');
-      const modal = root.querySelector('[data-tw-modal]');
-      if (!openBtn || !modal) return;
-
-      const open = () => {
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-      };
-
-      const close = () => {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-      };
-
-      openBtn.onclick = open;
-      modal.querySelectorAll('[data-tw-close]').forEach((btn) => (btn.onclick = close));
-
-      const backdrop = modal.querySelector('[data-tw-backdrop]');
-      if (backdrop) backdrop.onclick = close;
-
-      if (!window.__twModalEscBound) {
-        window.addEventListener('keydown', (e) => {
-          if (e.key !== 'Escape') return;
-          const m = document.querySelector('#preview-tw [data-tw-modal]');
-          if (m && !m.classList.contains('hidden')) {
-            m.classList.add('hidden');
-            m.classList.remove('flex');
-          }
-        });
-        window.__twModalEscBound = true;
-      }
-    };
-  </script>
 
 </body>
 
